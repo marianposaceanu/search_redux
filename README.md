@@ -4,14 +4,24 @@ The current version is just a code extraction of a simple text search using espe
 
 For now the usage is limited, it expects a title and a content column.
 
-Usage :
+# Installation 
 
-    class MyModel
-      act_as_searchable
-    end
+Include the gem in your Gemfile:
 
-    class MyController
-      def index
-        an_article = MyModel.text_search 'query phrase'
-      end
-    end
+```ruby
+gem 'fulltext_search_redux'
+```
+
+# Quick start
+
+```ruby
+class MyModel
+  act_as_searchable
+end
+
+class MyController
+  def index
+    an_article = MyModel.text_search 'query phrase'
+  end
+end
+```
