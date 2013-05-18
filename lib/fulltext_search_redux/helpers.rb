@@ -1,6 +1,6 @@
 module FulltextSearchRedux
   module Helpers
-    def select_best_query_stategy(adapter, query)
+    def select_best_query_strategy(adapter, query)
       case adapter
       when /mysql.*/i    
         FulltextSearchRedux::Mysql.compatible_search(query)

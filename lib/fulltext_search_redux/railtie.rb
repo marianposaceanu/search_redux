@@ -2,7 +2,7 @@ module FulltextSearchRedux
   require 'rails'
 
   class Railtie < Rails::Railtie
-    initializer 'fulltext_search_redux.insert_into_active_record'
+    initializer 'fulltext_search_redux.insert_into_active_record' do |app|
       FulltextSearchRedux::Railtie.insert
     end
     
