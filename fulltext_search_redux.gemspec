@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n") 
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ['lib']
-  s.homepage      = 'http://marianposaceanu.com'
+  s.homepage      = 'https://github.com/dakull/fulltext_search_redux'
 
   s.required_ruby_version = '>= 1.9.2'
 
