@@ -1,4 +1,4 @@
-module FulltextSearchRedux
+module SearchRedux
   module Glue
     def self.included(base)
       base.extend ClassMethods

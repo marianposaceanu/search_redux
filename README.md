@@ -4,12 +4,12 @@ The current version is just a code extract of a simple text search logic using  
 
 For now the usage is limited, it expects a `title` and a `content` column.
 
-## Installation 
+## Installation
 
 Include the gem in your Gemfile:
 
 ```ruby
-gem 'fulltext_search_redux'
+gem 'search_redux'
 ```
 
 ## Quick start
