@@ -1,8 +1,10 @@
-# Full text search redux
+# Search redux
 
-The current version is just a code extract of a simple text search logic using  Postgres [functionality](http://www.postgresql.org/docs/8.3/static/textsearch.html) and a simple fallback for other RDBMs (e.g. Mysql)
+A simple way to add full text search to your Rails models. Currently supported RDBMs are [Postgres](http://www.postgresql.org/docs/8.3/static/textsearch.html) anda simple fallback for other RDBMs (e.g. Mysql).
 
-For now the usage is limited, it expects a `title` and a `content` column.
+## Requirements
+
+Search redux requires at least Ruby >= 1.9.2 and Rails >= 3.0.0 and Postgres >= 9.2.
 
 ## Installation
 
@@ -14,11 +16,17 @@ gem 'search_redux'
 
 ## Quick start
 
+In your model call the `act_as_searchable` with the columns that you want to search and the column for rank-based ordering.
+
 ```ruby
 class MyModel
-  act_as_searchable
+  act_as_searchable :columns => %w(title content), :rank => 'title'
 end
+```
 
+You can easily search via the `text_search` method.
+
+```ruby
 class MyController
   def index
     an_article = MyModel.text_search 'query phrase'
