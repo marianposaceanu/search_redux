@@ -33,3 +33,6 @@ class MyController
   end
 end
 ```
+## License 
+
+search_redux is released under the [MIT](http://opensource.org/licenses/MIT) License
