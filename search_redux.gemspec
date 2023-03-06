@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.name          = 'search_redux'
   s.version       = SearchRedux::VERSION
   s.platform      = Gem::Platform::RUBY
+  s.licenses      = ['MIT']
   s.summary       = 'Add a text_search method to your models.'
   s.description   = 'Simple ActiveRecord full text search.'
   s.author        = 'Marian Posaceanu'
@@ -16,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 1.9.2'
 
-  s.add_dependency('activerecord', '>= 3.0.0')
-  s.add_dependency('activemodel', '>= 3.0.0')
-  s.add_dependency('activesupport', '>= 3.0.0')
+  s.add_runtime_dependency 'activerecord', '>= 5.0.0'
+  s.add_runtime_dependency 'activemodel', '>= 5.0.0'
+  s.add_runtime_dependency 'activesupport', '>= 5.0.0'
 end
