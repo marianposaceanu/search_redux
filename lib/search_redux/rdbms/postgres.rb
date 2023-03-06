@@ -8,7 +8,7 @@ module SearchRedux
         rank_query   = rank_sql(options[:rank], query)
         search_query = search_sql(options[:columns])
 
-        ->(obj) { obj.where(search_query, q: Arel.sql(query)).order(Arel.sql(rank_query)) }
+        ->(obj) { obj.where(Arel.sql(search_query), q: Arel.sql(query)).order(Arel.sql(rank_query)) }
       end
 
       def rank_sql(rank_column, query)
