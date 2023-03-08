@@ -1,3 +1,3 @@
 module SearchRedux
-  VERSION = '1.0.2' unless defined? SearchRedux::VERSION
+  VERSION = '1.0.3' unless defined? SearchRedux::VERSION
 end

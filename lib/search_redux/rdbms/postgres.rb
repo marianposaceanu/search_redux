@@ -12,7 +12,8 @@ module SearchRedux
       end
 
       def to_ts_query(query)
-        query.split.map { |ts| "#{ts}:*" }.join(" & ")
+        words = query.scan(/\s*("([^"]+)"|\w+)\s*/)&.flatten&.compact
+        words.map { |ts| "#{ts}:*" }.join(" & ")
       end
 
       def rank_sql(rank_column, query)
